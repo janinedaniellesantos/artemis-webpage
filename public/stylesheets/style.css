@@ -129,3 +129,23 @@ main {
   background: lightgrey;
   min-height: calc(100vh - 90px);
 }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  margin-top: 1rem;
+}
+
+.card-single {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  padding: 2rem;
+  border-radius: 2px;
+}
+
+.card-single h1 + span {
+  color: grey;
+}
+
