@@ -1,1 +1,1 @@
-web: node ./bin/wwwgit
+web: node ./bin/www
