@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Home Page</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
     <style>
 
         * {
@@ -15,6 +23,12 @@
             text-decoration: none;
             font-family: 'Quicksand', sans-serif;
         }
+        .top-menu {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
 
     </style>
     <link
@@ -44,32 +58,38 @@
                     <a href="settings.html"><span class="las la-user"></span>
                         <span>Settings</span></a>
                 </li>
+                <li>
+                    <a href="battery.html"><span class="las la-user"></span>
+                        <span>Battery Updates</span></a>
+                </li>
             </ul>
         </div>
     </div>
 
     <div class="main-content">
-        <header>
-            <h1>
-                <label for="">
-                     <span class="las la-bars"></span>
-                </label>
-                Home
-            </h1>
+        <div class="top-menu">
+            <header>
+                <h1>
+                    <label for="">
+                        <span class="las la-bars"></span>
+                    </label>
+                    Home
+                </h1>
 
-            <div class="search-wrapper">
-                <span class="las la-search"></span>
-                <input type="search" placeholder="Search here"/>
-            </div>
-
-            <div class = "user-wrapper">
-                <img src="./images/userImage.png" width="40px" height="40px" alt="">
-                <div>
-                    <h4>Janine Santos</h4>
-                    <small>@janine_danielle</small>
+                <div class="search-wrapper">
+                    <span class="las la-search"></span>
+                    <input type="search" placeholder="Search here"/>
                 </div>
-            </div>
-        </header>
+
+                <div class = "user-wrapper">
+                    <img src="./images/userImage.png" width="40px" height="40px" alt="">
+                    <div>
+                        <h4>Janine Santos</h4>
+                        <small>@janine_danielle</small>
+                    </div>
+                </div>
+            </header>
+        </div>
 
         <main>
             <h1> This Week </h1>
@@ -113,8 +133,50 @@
                         <span class="las la-star"></span>
                     </div>
                 </div>
+            </div>
+            <div></div>
+            <h1 style="padding-top: 5%; font: normal large 'Arial Black'"> Add a Trip </h1>
 
+            <div class="container">
+                <div class="container">
+                    <form method="POST"
+                          action="https://janine-net-backend.herokuapp.com/api/books/">
+                        <h2 class="text-center" style="color: dimgrey; font: semi-condensed large 'Arial Black'">Fill out the form below to add a trip!</h2>
+                        <div class="form-group">
+                            <label for="bookName">Trip Name:</label>
+                            <input type="text" name="bookName" id="bookName" class="form-control"
+                                   placeholder="Sunday trip">
+                        </div>
+                        <div class="form-group">
+                            <label for="authorName">Trip Date:</label>
+                            <input type="date" name="authorName" id="authorName" class="form-control"
+                                   placeholder="January 19, 2021">
+                        </div>
+                        <div class="form-group">
+                            <label for="price">Duration of Trip:</label>
+                            <input type="text" name="price" id="price" class="form-control"
+                                   placeholder="00:33:26">
+                        </div>
+                        <div class="form-group">
+                            <label for="isbn">Gallons of Trash Collected:</label>
+                            <input type="number" name="isbn" id="isbn" class="form-control"
+                                   placeholder="3">
+                        </div>
+                        <div class="form-group">
+                            <label for="price">Trash Log:</label>
+                            <input type="text" name="price" id="price" class="form-control"
+                                   placeholder="5 water bottles, 2 plastic bags ">
+                        </div>
+                    </form>
 
+                </div>
+                <div class="container">
+                    <button class="btn-warning btn-lg btn-block" id="btnAddBook">Add Trip</button>
+                </div>
+
+                <div class="jumbotron" id="output" style="margin-top: 2%">
+
+                </div>
             </div>
         </main>
     </div>
