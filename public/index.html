@@ -137,34 +137,42 @@
             <div></div>
             <h1 style="padding-top: 5%; font: normal large 'Arial Black'"> Add a Trip </h1>
 
+
+
+            tripName: String,
+            tripDate: Date,
+            tripDuration: String,
+            trashGallon: Number,
+            trashLog: String
+
             <div class="container">
                 <div class="container">
                     <form method="POST"
                           action="https://janine-net-backend.herokuapp.com/api/books/">
                         <h2 class="text-center" style="color: dimgrey; font: semi-condensed large 'Arial Black'">Fill out the form below to add a trip!</h2>
                         <div class="form-group">
-                            <label for="bookName">Trip Name:</label>
-                            <input type="text" name="bookName" id="bookName" class="form-control"
+                            <label for="tripName">Trip Name:</label>
+                            <input type="text" name="tripName" id="tripName" class="form-control"
                                    placeholder="Sunday trip">
                         </div>
                         <div class="form-group">
-                            <label for="authorName">Trip Date:</label>
-                            <input type="date" name="authorName" id="authorName" class="form-control"
+                            <label for="tripDate">Trip Date:</label>
+                            <input type="date" name="tripDate" id="tripDate" class="form-control"
                                    placeholder="January 19, 2021">
                         </div>
                         <div class="form-group">
-                            <label for="price">Duration of Trip:</label>
-                            <input type="text" name="price" id="price" class="form-control"
+                            <label for="tripDuration">Duration of Trip:</label>
+                            <input type="text" name="tripDuration" id="tripDuration" class="form-control"
                                    placeholder="00:33:26">
                         </div>
                         <div class="form-group">
-                            <label for="isbn">Gallons of Trash Collected:</label>
-                            <input type="number" name="isbn" id="isbn" class="form-control"
+                            <label for="trashGallon">Gallons of Trash Collected:</label>
+                            <input type="number" name="trashGallon" id="trashGallon" class="form-control"
                                    placeholder="3">
                         </div>
                         <div class="form-group">
-                            <label for="price">Trash Log:</label>
-                            <input type="text" name="price" id="price" class="form-control"
+                            <label for="trashLog">Trash Log:</label>
+                            <input type="text" name="trashLog" id="trashLog" class="form-control"
                                    placeholder="5 water bottles, 2 plastic bags ">
                         </div>
                     </form>
